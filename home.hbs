@@ -1,0 +1,68 @@
+{{!< default}}
+
+{{#contentFor 'title'}}{{ meta_title }}{{/contentFor}}
+
+{{!-- Show the custom homepage content --}}
+
+{{#get "pages" filter="slug:home" limit="1"}}
+{{#foreach pages}}
+<div class="c-hero__wrap">
+  <div class="c-hero{{#unless feature_image}} c-hero--content-only{{/unless}}">
+    <div class="c-hero__tx">
+      {{!-- <div class="c-hero__support">{{ @site.title }}</div> --}}
+      <div class="c-hero__content--wrap">
+        <div class="c-hero__content">{{ content }}</div>
+      </div>
+      {{!-- {{#if @price.use}}
+        {{#unless @member.paid}}
+      <div class="c-hero__membership">
+        <a href="{{ @site.url }}/membership/" class="bg-accent c-hero__membership--link">{{t 'Membership' }}</a>
+      </div>
+        {{/unless}}
+      {{/if}} --}}
+    </div>
+    {{#if feature_image}}
+    <div class="c-hero__media">
+      <img class="c-hero__image" src="{{img_url feature_image }}" alt="{{ @site.title }}">
+    </div>
+    {{/if}}
+  </div>
+</div>
+{{/foreach}}
+{{/get}}
+
+<div class="c-home-promotion bg-accent">
+  <div class="o-container">
+    <div class="c-home-promotion__section">
+      <div class="c-home-promotion__content">
+        {{#if @custom.promotion_text_main }}
+        <h2 class="c-home-promotion__content--main">{{ @custom.promotion_text_main }}</h2>
+        {{/if}}
+        {{#if @custom.promotion_text_sub }}
+        <p class="c-home-promotion__content--sub">{{ @custom.promotion_text_sub }}</p>
+        {{/if}}
+      </div>
+      <div class="c-home-promotion__action">
+        <a class="c-home-promotion__action--button" href="{{ @custom.promotion_button_url }}">{{ @custom.promotion_button_text }}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="c-archive-grid">
+  <div class="o-container">
+    {{> loop }}
+  </div>
+</div>
+
+<div class="o-container">
+  <div class="c-archive-more">
+    <a class="c-archive-more__button" href="">뉴스레터 전체 보기</a>
+  </div>
+</div>
+
+{{> shop }}
+
+{{!-- {{> home/all-posts-link }} --}
+
+{{!-- {{> subscribe-box }} --}}

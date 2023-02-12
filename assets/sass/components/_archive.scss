@@ -1,0 +1,85 @@
+/*------------------------------------*\
+  Components > Archive
+\*------------------------------------*/
+
+.c-archive {
+  margin-bottom: $space-24;
+  padding-bottom: $space-24;
+  border-bottom: 1px solid var(--color-border);
+
+  @include mq($from: desktop) {
+    margin-bottom: $space-40;
+    padding-bottom: $space-40;
+  }
+
+  &--no-border {
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+
+  &__title {
+    font-size: $type--h-sm;
+    line-height: $type--h-sm-lh;
+    letter-spacing: - $global-letter-spacing;
+  }
+
+  &__description {
+    font-size: $type-lg;
+    line-height: $type-lg-lh;
+    margin-top: $space-8;
+
+    @include mq($from: desktop) {
+      font-size: $type-xl;
+      line-height: $type-xl-lh;
+      margin-top: $space-16;
+    }
+
+    &:empty {
+      display: none;
+    }
+  }
+}
+
+.c-archive-grid {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  .c-loop {
+    display: grid;
+    gap: 60px 20px;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include mq($from: 903px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mq($from: 1200px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.c-archive-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 60px 0;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 100rem;
+    border: 2px solid #000;
+    color: #000;
+    min-width: 320px;
+    height: 60px;
+    font-size: 14px;
+    font-weight: 700;
+
+    @include attention() {
+      background-color: rgba(14, 21, 14, 0.2);
+    }
+  }
+}

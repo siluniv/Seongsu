@@ -1,0 +1,45 @@
+<style>
+/* For Bluedot */
+:root {
+  /* --body-background: var(--background-primary); */
+  --body-background: {{ @custom.brand_background_color }};
+  --content-background: var(--background-primary);
+
+  --paywall-background:rgba(0,0,0,0.8);
+  --text:var(--color-text);
+  --sub-text:var(--color-gray);
+  --accent-color: {{ @site.accent_color }};
+  --shop-accent-color: {{ @custom.shop_point_color }};
+  --shop-accent-background-color: {{ @custom.shop_point_background_color }};
+}
+.bluedot-signin h3.signin-subtitle {
+  color:var(--text);
+}
+
+.bluedot-footer { padding-top:20px; padding-bottom:30px; }
+.bluedot-footer h2 { display:none; }
+
+/* Style */
+body * {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  background-color: var(--body-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bg-accent {
+  background-color: var(--accent-color);
+}
+
+.have-paywall-message .post-content:after {
+  background: linear-gradient( 0deg, var(--body-background) 14%, hsla(0, 0%, 100%, 0) );
+}
+
+.c-hero__tx {
+  background-color: {{ @custom.home_hero_content_background_color }};
+}
+
+</style>
