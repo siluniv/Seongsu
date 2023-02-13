@@ -24,5 +24,11 @@
     height: 60px;
     font-size: 14px;
     font-weight: 700;
+    transition: all 0.2s;
+
+    @include attention() {
+      background-color: #000;
+      color: #fff;
+    }
   }
 }

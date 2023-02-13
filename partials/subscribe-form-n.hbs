@@ -12,14 +12,14 @@
 
 <div class="c-subscribe__g">
   <div class="c-subscribe__g--side">
-    <span class="c-subscribe__g--label">Newsletter</span>
-    <h2 class="c-subscribe__g--title">{{ @custom.newsletter_form_title }}</h2>
+    <span class="c-subscribe__g--label">{{ @custom.newsletter_form_title }}</span>
+    <h2 class="c-subscribe__g--title">{{ @custom.newsletter_form_description }}</h2>
   </div>
   <div class="c-subscribe__g--form-container">
     <form data-members-form="subscribe" class="c-subscribe__g--form">
       <label for="{{ inputLabel }}" class="u-hidden-visually">{{t 'Your email address' }}</label>
       <input type="email" name="email" class="c-subscribe__g--form-input" id="{{ inputLabel }}" placeholder="{{t 'Your email address' }}" required data-members-email>
-      <button type="submit" class="c-subscribe__g--form-submit">구독</button>
+      <button type="submit" class="c-subscribe__g--form-submit">{{ @custom.newsletter_form_button_text }}</button>
     </form>
   </div>
 </div>

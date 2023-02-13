@@ -7,7 +7,7 @@
       {{> shop/tags type="my-purchases" }}
     </div>
 
-    {{#get "products" limit="all" filter=(concat "option_type:" type) order="published_at desc" paid="true"}}
+    {{#get "products" limit="all" order="published_at desc" paid="true"}}
     {{#if products}}
     <div class="bluedot-products-list">
     {{#foreach products visibility="all"}}

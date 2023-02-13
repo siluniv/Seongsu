@@ -6,8 +6,13 @@
   height: 80px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #000;
   margin-bottom: 60px;
+  position: relative;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+
+  @include mq($until: desktop) {
+    border-bottom: 1px solid #000;
+  }
 
   @include mq($from: desktop) {
     padding: $space-40 0;
