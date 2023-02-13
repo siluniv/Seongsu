@@ -6,6 +6,7 @@
     max-width: none;
     padding: 0;
     border: 0;
+    position: relative;
   }
 
   &__tx {
@@ -18,10 +19,28 @@
     width: 100%;
     margin: 0;
     text-align: inherit;
+
+    &--wrap {
+      padding: 20px 0;
+
+      @include mq($from: desktop) {
+        width: 50%;
+        padding: 60px 0;
+      }
+    }
+
+    @include mq($from: desktop) {
+      padding-right: 60px;
+    }
   }
 
   &__media {
     max-height: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    bottom: 0;
 
     @include mq($until: desktop) {
       display: none;

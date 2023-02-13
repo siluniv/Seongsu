@@ -38,8 +38,15 @@ body {
   background: linear-gradient( 0deg, var(--body-background) 14%, hsla(0, 0%, 100%, 0) );
 }
 
-.c-hero__tx {
+.c-hero__wrap {
   background-color: {{ @custom.home_hero_content_background_color }};
 }
 
+.c-hero__content,
+.c-hero__content #stb_subscribe *,
+.c-hero__content #stb_subscribe .stb_form_title,
+.c-hero__content #stb_subscribe .stb_form_description,
+.c-hero__content #stb_subscribe .stb_form_policy label button {
+  color: {{ @custom.home_hero_content_color }};
+}
 </style>

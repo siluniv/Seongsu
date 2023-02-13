@@ -57,6 +57,12 @@
         "default": "#ffffff",
         "title": "홈 상단 콘텐츠 영역 배경색"
       },
+      "home_hero_content_color": {
+        "group": "home",
+        "type": "color",
+        "default": "#000000",
+        "title": "홈 상단 콘텐츠 영역 글자색"
+      },
       "brand_background_color": {
         "group": "layout",
         "type": "color",

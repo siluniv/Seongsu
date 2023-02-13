@@ -246,3 +246,20 @@ const shop_hero = new Swiper('.c-shop-featured__carousel--swiper', {
 });
 
 history.scrollRestoration = "manual"
+
+var $user_name = document.querySelectorAll('.stb_form_set_input')
+
+function onFocus(e) {
+  e.target.parentElement.classList.add("on");
+}
+
+function onBlur(e) {
+  if (e.target.value == "") {
+    e.target.parentElement.classList.remove("on");
+  }
+}
+
+for (i = 0; i < $user_name.length; i++) {
+  $user_name[i].addEventListener('focus', onFocus);
+  $user_name[i].addEventListener('blur', onBlur);
+}
