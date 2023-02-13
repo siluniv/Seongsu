@@ -49,6 +49,14 @@
   </div>
 </div>
 
+<div class="c-home-category__wrap">
+  <div class="o-container">
+    <ul class="c-home-category">
+      {{navigation type="secondary"}}
+    </ul>
+  </div>
+</div>
+
 <div class="c-archive-grid">
   <div class="o-container">
     {{> loop }}
@@ -57,7 +65,7 @@
 
 <div class="o-container">
   <div class="c-archive-more">
-    <a class="c-archive-more__button" href="">뉴스레터 전체 보기</a>
+    {{#link href="blog" class="c-archive-more__button"}}뉴스레터 전체 보기{{/link}}
   </div>
 </div>
 

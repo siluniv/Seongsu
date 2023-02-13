@@ -3,13 +3,26 @@
 \*------------------------------------*/
 
 .c-pagination {
-  margin-bottom: $space-32;
+  margin: 50px 0;
 
-  @include mq($from: desktop) {
-    margin-bottom: $space-40;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
 
   &--count-0 {
     display: none;
+  }
+
+  a {
+    border-radius: 100rem;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 240px;
+    height: 60px;
+    font-size: 14px;
+    font-weight: 700;
   }
 }

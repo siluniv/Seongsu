@@ -3,19 +3,27 @@
 {{#contentFor 'title'}}{{t 'Blog' }}{{/contentFor}}
 
 <div class='o-grid'>
-  <div class='o-grid__col o-grid__col--center o-grid__col--9-10-m o-grid__col--2-3-l'>
+  <div class='o-grid__col'>
     <div class='c-archive'>
-      <h1 class='c-archive__title'>Blog</h1>
+      <h1 class='c-archive__title'>뉴스레터</h1>
     </div>
   </div>
 </div>
 
-<div class='o-grid'>
-  <div class='o-grid__col o-grid__col--center o-grid__col--9-10-m o-grid__col--2-3-l'>
+<div class="c-home-category__wrap">
+  <div class="o-container">
+    <ul class="c-home-category">
+      {{navigation type="secondary"}}
+    </ul>
+  </div>
+</div>
+
+<div class="c-archive-grid">
+  <div class="o-container">
     {{> loop }}
   </div>
 </div>
 
-<div class='o-grid'>
+<div class="o-container">
   {{ pagination }}
 </div>
