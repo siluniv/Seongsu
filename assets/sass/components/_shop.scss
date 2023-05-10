@@ -169,3 +169,31 @@
     }
   }
 }
+
+/**
+ * ====================
+ * Shop Page
+ * ====================
+ */
+ .c-shop-page {
+  &__hero {
+    background-color: #efefef;
+  }
+
+  &__main {
+    background-color: #fff;
+    padding-bottom: 60px;
+  }
+}
+
+[data-user-color-scheme="dark"] {
+  .c-shop-page {
+    &__hero {
+      background-color: #4a4a4a;
+    }
+
+    &__main {
+      background-color: #333;
+    }
+  }
+}
