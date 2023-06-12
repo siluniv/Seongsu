@@ -1,7 +1,7 @@
 {
   "name": "seongsu",
   "description": "블루닷 성수(Seongsu) 테마",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "ghost": ">=4.0.0"
   },
