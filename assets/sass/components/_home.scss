@@ -379,3 +379,13 @@
   }
 
 }
+
+
+.c-home-products-carousel {
+  border-top: 1px solid #000;
+  overflow: hidden;
+
+  @include mq($from: desktop) {
+    padding: 14px 0;
+  }
+}
