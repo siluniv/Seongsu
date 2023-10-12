@@ -1,72 +1,66 @@
-{{!< default}}
-
-{{#contentFor 'title'}}{{ meta_title }}{{/contentFor}}
-
-{{!-- Show the custom homepage content --}}
-
-{{#get "pages" filter="slug:home" limit="1"}}
-{{#foreach pages}}
-<div class="c-hero__wrap">
+{{!< default}} {{#contentFor 'title' }}{{ meta_title }}{{/contentFor}} {{!-- Show the custom homepage content --}}
+  {{#get "pages" filter="slug:home" limit="1" }} {{#foreach pages}} <div class="c-hero__wrap">
   <div class="o-grid">
     <div class="o-grid__col">
       <div class="c-hero__content--wrap">
         <div class="c-hero__content">{{ content }}</div>
-      </div>
-    </div>
-  </div>
-  {{#if feature_image}}
-  <div class="c-hero__media">
-    <img class="c-hero__image" src="{{img_url feature_image }}" alt="{{ @site.title }}">
-  </div>
-  {{/if}}
-</div>
-{{/foreach}}
-{{/get}}
-
-<div class="c-home-promotion bg-accent">
-  <div class="o-container">
-    <div class="c-home-promotion__section">
-      <div class="c-home-promotion__content">
-        {{#if @custom.promotion_text_main }}
-        <h2 class="c-home-promotion__content--main">{{ @custom.promotion_text_main }}</h2>
-        {{/if}}
-        {{#if @custom.promotion_text_sub }}
-        <p class="c-home-promotion__content--sub">{{ @custom.promotion_text_sub }}</p>
+        {{#if feature_image}}
+        <div class="c-hero__media">
+          <img class="c-hero__image" src="{{img_url feature_image }}" alt="{{ @site.title }}">
+        </div>
         {{/if}}
       </div>
-      <div class="c-home-promotion__action">
-        <a class="c-home-promotion__action--button" href="{{ @custom.promotion_button_url }}">{{ @custom.promotion_button_text }}</a>
+    </div>
+  </div>
+  </div>
+  {{/foreach}}
+  {{/get}}
+
+  <div class="c-home-promotion bg-accent">
+    <div class="o-container">
+      <div class="c-home-promotion__section">
+        <div class="c-home-promotion__content">
+          {{#if @custom.promotion_text_main }}
+          <h2 class="c-home-promotion__content--main">{{ @custom.promotion_text_main }}</h2>
+          {{/if}}
+          {{#if @custom.promotion_text_sub }}
+          <p class="c-home-promotion__content--sub">{{ @custom.promotion_text_sub }}</p>
+          {{/if}}
+        </div>
+        <div class="c-home-promotion__action">
+          <a class="c-home-promotion__action--button" href="{{ @custom.promotion_button_url }}">{{
+            @custom.promotion_button_text }}</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="c-home-category__wrap">
-  <div class="o-container">
-    <ul class="c-home-category">
-      {{navigation type="secondary"}}
-    </ul>
-  </div>
-</div>
-
-<div class="c-archive-grid">
-  <div class="o-container">
-    {{> loop }}
-  </div>
-</div>
-
-<div class="o-container">
-  <div class="c-archive-more">
-    {{#link href="blog" class="c-archive-more__button"}}뉴스레터 전체 보기{{/link}}
-  </div>
-</div>
-
-{{#match @custom.shop_display_status "on"}}
-<div class="c-home-products-carousel">
-  <div class="o-grid">
-    <div class="o-grid__col o-grid__col--full">
-      {{> common/products/carousel-section which="home" nav="true" }}
+  <div class="c-home-category__wrap">
+    <div class="o-container">
+      <ul class="c-home-category">
+        {{navigation type="secondary"}}
+      </ul>
     </div>
   </div>
-</div>
-{{/match}}
+
+  <div class="c-archive-grid">
+    <div class="o-container">
+      {{> loop }}
+    </div>
+  </div>
+
+  <div class="o-container">
+    <div class="c-archive-more">
+      {{#link href="blog" class="c-archive-more__button"}}뉴스레터 전체 보기{{/link}}
+    </div>
+  </div>
+
+  {{#match @custom.shop_display_status "on"}}
+  <div class="c-home-products-carousel">
+    <div class="o-grid">
+      <div class="o-grid__col o-grid__col--full">
+        {{> common/products/carousel-section which="home" nav="true" }}
+      </div>
+    </div>
+  </div>
+  {{/match}}
