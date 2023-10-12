@@ -22,6 +22,7 @@
 
     &--wrap {
       padding: 20px 0;
+      height: 100%;
 
       @include mq($from: desktop) {
         width: 50%;
@@ -36,10 +37,13 @@
 
   &__media {
     max-height: none;
+    padding: 60px 0;
     position: absolute;
     top: 0;
     right: 0;
     width: 50%;
+    height: 100%;
+    overflow: hidden;
     bottom: 0;
 
     @include mq($until: desktop) {
@@ -48,6 +52,8 @@
   }
 
   &__image {
+    width: 100%;
     height: 100%;
+    object-fit: contain;
   }
 }
